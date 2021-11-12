@@ -448,6 +448,15 @@ Ex : '; exec master..xp_dirtree '//0efdymgw1o5w9inae8mg4dfrgim9ay.burpcollaborat
 
 *os command injection:
 	if application is accpeting os commands as in input, it is vulnerable to os command injection.
+	prevention : validate user input allow only alphanumeric charecter and no any other syntax and whitespace
+	              validating that the input is number
+		      
+	way of injecting os command : following command seperator work on both windows based and unix based
+	                               &
+	                               &&
+				       |
+				       ||
+				       
 	Ex : ls;
 
 *LDAP injection :
