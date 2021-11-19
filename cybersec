@@ -460,6 +460,8 @@ Ex : '; exec master..xp_dirtree '//0efdymgw1o5w9inae8mg4dfrgim9ay.burpcollaborat
                                      ` injected command `
                                      $( injected command )			       
 	Ex : ls;
+	prevention : Validating against a whitelist of permitted values.
+                     Validating that the input is a number
 
 *LDAP injection :
 	lightweight directory access protocol use for sharing directory services between client and server.
