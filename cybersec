@@ -687,7 +687,8 @@ There are classes that are chain together to change the behaviour during or afte
 The application accepts deserialized or hostile data from untrusted sources.
 Missing integrity check of data.
 
-Prevention : 
+Prevention :
+        implement a digital signature to check the integrity of the data
 	Not accepting serialized objects from untrusted sources.
 	Implement integrity check to prevent data tampering.
 	Enforce strict type constraint during deserialization before object 	creation.
